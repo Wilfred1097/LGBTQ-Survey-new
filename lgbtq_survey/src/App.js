@@ -68,8 +68,8 @@ function App() {
   const handleChangeEmail = (e) => {
     setFormData({ ...formData, email: e.target.value });
   };
-  const handleCampusChange = (e) => {
-    setFormData({ ...formData, campus: e.target.value });
+  const handleCourseChange = (e) => {
+    setFormData({ ...formData, course: e.target.value });
   };
 
   const handleAgeChange = (e) => {
@@ -161,174 +161,85 @@ function App() {
             </Form.Group>
             {/* Number 1 */}
             <Form.Group className="mb-3">
-            <Form.Label>1. In what campus where you came from?</Form.Label>
+            <Form.Label>1. What department where you came from?</Form.Label>
             <div>
             <Form.Check
                 block
                 type="radio"
-                label="WMSU Main Campus"
+                label="Bachelor of Elementary Education"
                 id="campus_main"
-                value="WMSU Main Campus"
-                name="campus"
-                checked={formData.campus === "WMSU Main Campus"}
-                onChange={handleCampusChange}
+                value="Bachelor of Elementary Education"
+                name="course"
+                checked={formData.course === "Bachelor of Elementary Education"}
+                onChange={handleCourseChange}
                 required
               />
               <Form.Check
                 block
                 type="radio"
-                label="Alicia, Zamboanga Sibugay"
+                label="Bachelor of Science in Criminology"
                 id="campus_alicia"
-                value="Alicia, Zamboanga Sibugay"
-                name="campus"
-                checked={formData.campus === "Alicia, Zamboanga Sibugay"}
-                onChange={handleCampusChange}
+                value="Bachelor of Science in Criminology"
+                name="course"
+                checked={formData.course === "Bachelor of Science in Criminology"}
+                onChange={handleCourseChange}
                 required
               />
               <Form.Check
                 block
                 type="radio"
-                label="Aurora, Zamboanga del Sur"
+                label="Bachelor of Arts in Political Science"
                 id="campus_aurora"
-                value="Aurora, Zamboanga del Sur"
-                name="campus"
-                checked={formData.campus === "Aurora, Zamboanga del Sur"}
-                onChange={handleCampusChange}
+                value="Bachelor of Arts in Political Science"
+                name="course"
+                checked={formData.course === "Bachelor of Arts in Political Science"}
+                onChange={handleCourseChange}
                 required
               />
               <Form.Check
                 block
                 type="radio"
-                label="Diplahan, Zamboanga Sibugay"
-                id="campus_diplahan"
-                value="Diplahan, Zamboanga Sibugay"
-                name="campus"
-                checked={formData.campus === "Diplahan, Zamboanga Sibugay"}
-                onChange={handleCampusChange}
-                required
-              />
-              <Form.Check
-                block
-                type="radio"
-                label="Imelda, Zamboanga Sibugay"
+                label="Bachelor of Science in Social Work"
                 id="campus_imelda"
-                value="Imelda, Zamboanga Sibugay"
-                name="campus"
-                checked={formData.campus === "Imelda, Zamboanga Sibugay"}
-                onChange={handleCampusChange}
+                value="Bachelor of Science in Social Work"
+                name="course"
+                checked={formData.course === "Bachelor of Science in Social Work"}
+                onChange={handleCourseChange}
                 required
               />
               <Form.Check
                 block
                 type="radio"
-                label="Ipil, Zamboanga Sibugay"
+                label="Bachelor of Science in Computer Science"
+                id="campus_diplahan"
+                value="Bachelor of Science in Computer Science"
+                name="course"
+                checked={formData.course === "Bachelor of Science in Computer Science"}
+                onChange={handleCourseChange}
+                required
+              />
+              <Form.Check
+                block
+                type="radio"
+                label="Bachelor of Secondary Education major in Science"
                 id="campus_ipil"
-                value="Ipil, Zamboanga Sibugay"
-                name="campus"
-                checked={formData.campus === "Ipil, Zamboanga Sibugay"}
-                onChange={handleCampusChange}
+                value="Bachelor of Secondary Education major in Science"
+                name="course"
+                checked={formData.course === "Bachelor of Secondary Education major in Science"}
+                onChange={handleCourseChange}
                 required
               />
               <Form.Check
                 block
                 type="radio"
-                label="Mabuhay, Zamboanga Sibugay"
+                label="Bachelor of Secondary Education major in English"
                 id="campus_mabuhay"
-                value="Mabuhay, Zamboanga Sibugay"
-                name="campus"
-                checked={formData.campus === "Mabuhay, Zamboanga Sibugay"}
-                onChange={handleCampusChange}
+                value="Bachelor of Secondary Education major in English"
+                name="course"
+                checked={formData.course === "Bachelor of Secondary Education major in English"}
+                onChange={handleCourseChange}
                 required
               />
-              <Form.Check
-                block
-                type="radio"
-                label="Molave, Zamboanga del Sur"
-                id="campus_molave"
-                value="Molave, Zamboanga del Sur"
-                name="campus"
-                checked={formData.campus === "Molave, Zamboanga del Sur"}
-                onChange={handleCampusChange}
-                required
-              />
-              <Form.Check
-                block
-                type="radio"
-                label="Naga, Zamboanga Sibugay"
-                id="campus_naga"
-                value="Naga, Zamboanga Sibugay"
-                name="campus"
-                checked={formData.campus === "Naga, Zamboanga Sibugay"}
-                onChange={handleCampusChange}
-                required
-              />
-              <Form.Check
-                block
-                type="radio"
-                label="Olutanga, Zamboanga Sibugay"
-                id="campus_olutanga"
-                value="Olutanga, Zamboanga Sibugay"
-                name="campus"
-                checked={formData.campus === "Olutanga, Zamboanga Sibugay"}
-                onChange={handleCampusChange}
-                required
-              />
-              <Form.Check
-                block
-                type="radio"
-                label="Pagadian City, Zamboanga del Sur"
-                id="campus_pagadian"
-                value="Pagadian City, Zamboanga del Sur"
-                name="campus"
-                checked={formData.campus === "Pagadian City, Zamboanga del Sur"}
-                onChange={handleCampusChange}
-                required
-              />
-              <Form.Check
-                block
-                type="radio"
-                label="Siay, Zamboanga Sibugay"
-                id="campus_siay"
-                value="Siay, Zamboanga Sibugay"
-                name="campus"
-                checked={formData.campus === "Siay, Zamboanga Sibugay"}
-                onChange={handleCampusChange}
-                required
-              />
-              <Form.Check
-                block
-                type="radio"
-                label="Tungawan, Zamboanga Sibugay"
-                id="campus_tungawan"
-                value="Tungawan, Zamboanga Sibugay"
-                name="campus"
-                checked={formData.campus === "Tungawan, Zamboanga Sibugay"}
-                onChange={handleCampusChange}
-                required
-              />
-              <Form.Check
-                block
-                type="radio"
-                label="Curuan Campus, Zamboanga City"
-                id="campus_curuan"
-                value="Curuan Campus, Zamboanga City"
-                name="campus"
-                checked={formData.campus === "Curuan Campus, Zamboanga City"}
-                onChange={handleCampusChange}
-                required
-              />
-              <Form.Check
-                block
-                type="radio"
-                label="Malangas Campus, Zamboanga Sibugay"
-                id="campus_malangas"
-                value="Malangas Campus, Zamboanga Sibugay"
-                name="campus"
-                checked={formData.campus === "Malangas Campus, Zamboanga Sibugay"}
-                onChange={handleCampusChange}
-                required
-              />
-
             </div>
           </Form.Group>
           {/* Number 3 */}
@@ -416,7 +327,7 @@ function App() {
             </Form.Group>
             {/* Number 4 */}
             <Form.Group className="mb-3">
-              <Form.Label>4. What is your gender identity?</Form.Label><br />
+              <Form.Label>4. What is your sexual orientation?</Form.Label><br />
               <div>
                 <Form.Check
                   block
@@ -424,9 +335,9 @@ function App() {
                   label="Male"
                   id="gender_male"
                   value="Male"
-                  name="gender_identity"
-                  onChange={handleGenderChange}
-                  checked={formData.gender_identity === "Male"}
+                  name="sexual_orientation"
+                  onChange={handleSexualOrientationChange}
+                  checked={formData.sexual_orientation === "Male"}
                   required
                 />
                 <Form.Check
@@ -435,48 +346,48 @@ function App() {
                   label="Female"
                   id="gender_female"
                   value="Female"
-                  name="gender_identity"
-                  onChange={handleGenderChange}
-                  checked={formData.gender_identity === "Female"}
-                  required
-                />
-                <Form.Check
-                  block
-                  type="radio"
-                  label="Non-binary/genderqueer"
-                  id="gender_non-binary"
-                  value="Non-binary/genderqueer"
-                  name="gender_identity"
-                  onChange={handleGenderChange}
-                  checked={formData.gender_identity === "Non-binary/genderqueer"}
-                  required
-                />
-                <Form.Check
-                  block
-                  type="radio"
-                  label="Prefer not to say"
-                  id="not-to-say"
-                  value="Prefer not to say"
-                  name="gender_identity"
-                  onChange={handleGenderChange}
-                  checked={formData.gender_identity === "Prefer not to say"}
+                  name="sexual_orientation"
+                  onChange={handleSexualOrientationChange}
+                  checked={formData.sexual_orientation === "Female"}
                   required
                 />
               </div>
             </Form.Group>
             {/* Number 5 */}
             <Form.Group className="mb-3">
-              <Form.Label>5. What is your sexual orientation?</Form.Label><br />
+              <Form.Label>5. What is your gender identity?</Form.Label><br />
               <div>
+              <Form.Check
+                  block
+                  type="radio"
+                  label="Girl"
+                  id="sexual_girl"
+                  value="Girl"
+                  name="gender_identity"
+                  onChange={handleGenderChange}
+                  checked={formData['gender_identity'] === 'Girl'}
+                  required
+                />
+                <Form.Check
+                  block
+                  type="radio"
+                  label="Boy"
+                  id="sexual_boy"
+                  value="Boy"
+                  name="gender_identity"
+                  onChange={handleGenderChange}
+                  checked={formData['gender_identity'] === 'Boy'}
+                  required
+                />
                 <Form.Check
                   block
                   type="radio"
                   label="Lesbian"
                   id="sexual_lesbian"
                   value="Lesbian"
-                  name="sexual_orientation"
-                  onChange={handleSexualOrientationChange}
-                  checked={formData['sexual_orientation'] === 'Lesbian'}
+                  name="gender_identity"
+                  onChange={handleGenderChange}
+                  checked={formData['gender_identity'] === 'Lesbian'}
                   required
                 />
                 <Form.Check
@@ -485,9 +396,9 @@ function App() {
                   label="Gay"
                   id="sexual_gay"
                   value="Gay"
-                  name="sexual_orientation"
-                  onChange={handleSexualOrientationChange}
-                  checked={formData['sexual_orientation'] === 'Gay'}
+                  name="gender_identity"
+                  onChange={handleGenderChange}
+                  checked={formData['gender_identity'] === 'Gay'}
                   required
                 />
                 <Form.Check
@@ -496,9 +407,9 @@ function App() {
                   label="Bisexual"
                   id="sexual_bisexual"
                   value="Bisexual"
-                  name="sexual_orientation"
-                  onChange={handleSexualOrientationChange}
-                  checked={formData['sexual_orientation'] === 'Bisexual'}
+                  name="gender_identity"
+                  onChange={handleGenderChange}
+                  checked={formData['gender_identity'] === 'Bisexual'}
                   required
                 />
                 <Form.Check
@@ -507,9 +418,9 @@ function App() {
                   label="Pansexual"
                   id="sexual_pansexual"
                   value="Pansexual"
-                  name="sexual_orientation"
-                  onChange={handleSexualOrientationChange}
-                  checked={formData['sexual_orientation'] === 'Pansexual'}
+                  name="gender_identity"
+                  onChange={handleGenderChange}
+                  checked={formData['gender_identity'] === 'Pansexual'}
                   required
                 />
                 <Form.Check
@@ -518,9 +429,9 @@ function App() {
                   label="Asexual"
                   id="sexual_asexual"
                   value="Asexual"
-                  name="sexual_orientation"
-                  onChange={handleSexualOrientationChange}
-                  checked={formData['sexual_orientation'] === 'Asexual'}
+                  name="gender_identity"
+                  onChange={handleGenderChange}
+                  checked={formData['gender_identity'] === 'Asexual'}
                   required
                 />
                 <Form.Check
@@ -529,20 +440,9 @@ function App() {
                   label="Queer"
                   id="sexual_queer"
                   value="Queer"
-                  name="sexual_orientation"
-                  onChange={handleSexualOrientationChange}
-                  checked={formData['sexual_orientation'] === 'Queer'}
-                  required
-                />
-                <Form.Check
-                  block
-                  type="radio"
-                  label="Prefer not to say"
-                  id="sexual_not_to_say"
-                  value="prefer_not_to_say"
-                  name="sexual_orientation"
-                  onChange={handleSexualOrientationChange}
-                  checked={formData['sexual_orientation'] === 'prefer_not_to_say'}
+                  name="gender_identity"
+                  onChange={handleGenderChange}
+                  checked={formData['gender_identity'] === 'Queer'}
                   required
                 />
               </div>
@@ -571,17 +471,6 @@ function App() {
                   name="discrimination"
                   onChange={handleChangeDiscrimination}
                   checked={formData['discrimination'] === 'No'}
-                  required
-                />
-                <Form.Check
-                  block
-                  type="radio"
-                  label="Prefer not to say"
-                  id="discrimination_not_to_say"
-                  value="not_to_say"
-                  name="discrimination"
-                  onChange={handleChangeDiscrimination}
-                  checked={formData['discrimination'] === 'not_to_say'}
                   required
                 />
               </div>
@@ -810,17 +699,6 @@ function App() {
                   name="abuseExperience"
                   onChange={handleChangeAbuseExperience}
                   checked={formData['abuseExperience'] === 'No'}
-                  required
-                />
-                <Form.Check
-                  block
-                  type="radio"
-                  label="Prefer not to say"
-                  id="abuse_prefer_not_to_say"
-                  value="Prefer not to say"
-                  name="abuseExperience"
-                  onChange={handleChangeAbuseExperience}
-                  checked={formData['abuseExperience'] === 'Prefer not to say'}
                   required
                 />
               </div>
@@ -1152,18 +1030,6 @@ function App() {
         </Card.Body>
       </Card>
     </Container>
-
-    {showModal && (
-        <div className="modal-backdrop">
-          {/* Modal backdrop to dim the background */}
-          <div className="modal">
-            {/* Modal content */}
-            <h2>Welcome to Our Website!</h2>
-            <p>This is a modal that pops up when the user opens the page.</p>
-            <button onClick={handleCloseModal}>Close</button>
-          </div>
-        </div>
-      )}
     </>
   );
 }
